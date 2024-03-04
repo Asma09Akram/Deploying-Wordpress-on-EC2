@@ -68,11 +68,13 @@ dnf info mariadb105
 
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/91784474-c25f-4aae-ac60-cbe7973ad9be)
 
+
 ```
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 sudo systemctl status mariadb
 ```
+
 
 
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/aaaafd93-76e8-45f9-9888-a80cf433cd82)
