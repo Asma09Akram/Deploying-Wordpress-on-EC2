@@ -35,10 +35,12 @@ Task 4:
 
 4.3  Install MySQL or MariaDB and set up a database, user and password for WordPress.
 ``` sudo yum install httpd ```
+
 4.3.1 Install MySQL or MariaDB and set up a database, user and password for WordPress. We would be installing MariaDB server.
 
 ``` sudo dnf install mariadb105-server
-dnf info mariadb105```
+dnf info mariadb105
+```
 
 
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/7a92f236-24bc-4bf5-bedf-4b33414c9d46)
