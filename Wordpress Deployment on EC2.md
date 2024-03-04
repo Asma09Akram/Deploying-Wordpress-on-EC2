@@ -111,7 +111,7 @@ Create a new database and a dedicated user for WordPress and grant appropriate p
 
 
 ```
-CREATE USER 'wordpress-user'@'localhost' IDENTIFIED BY 'your_strong_password';
+CREATE USER 'wordpress-asma'@'localhost' IDENTIFIED BY 'your_strong_password';
 
 CREATE DATABASE `wordpress-db`;
 
@@ -130,28 +130,60 @@ exit
 
 
 
+STEP 4: Downloading and Configuring WordPress:
+
+Navigate to the /tmp directory and fetch the latest WordPress package from the official WordPress website.
+
+``` cd /tmp
+wget https://wordpress.org/latest.tar.gz
+```
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/8e25fc11-a5dd-47f9-855d-e03cb6c4a32d)
+
+
+Extract: Extract the WordPress files into the webserver’s document root directory (e.g., /var/www/html/).
+
+Unzip and unarchive installation packages to a folder called WordPress and confirm the folder.
+
+```tar -xzf latest.tar.gz```
 
 
 
+Move file into the html document route directory
+
+```sudo mv wordpress/ /var/www/html/```
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/c61f8723-4df6-45c3-a0fa-17499381fe54)
 
 
+STEP 5: WordPress Installation:
+
+Access Installation Wizard: Open a web browser and navigate to your EC2 instance’s public IP or domain name to access the WordPress installation wizard.
+
+Launch your web browser with your Public IPv4 DNS and put /wordpress as the endpoint.
 
 
+```ec2-3-110-32-180.ap-south-1.compute.amazonaws.com/wordpress/```
 
 
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/32e97a82-3128-472f-9f08-b83479a5d926)
 
 
+STEP 6: Database Setup: Enter the database details created earlier during the installation wizard.
+STEP 7: Complete Installation: Fill in website information, create an admin account, configure the wp-config.php file with the database details and finalize the installation.
 
 
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/200f0b7a-3505-43ad-a5fe-7af97197b3ab)
 
 
+To create and edit the wp-config.php file
+The WordPress installation folder contains a sample configuration file called wp-config-sample.php. In this procedure, you copy this file and edit it to fit your specific configuration.
 
 
+Copy the wp-config-sample.php file to a file called wp-config.php. This creates a new configuration file and keeps the original sample file intact as a backup.
 
 
-
-
-
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/522cccb1-2179-4e88-870d-167499515f93)
 
 
 
