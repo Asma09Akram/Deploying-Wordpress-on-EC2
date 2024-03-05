@@ -37,7 +37,6 @@ Task 4:
 ``` sudo yum install httpd ```
 
 
-
 4.4 Install PHP and necessary PHP modules required by WordPress.
 
 ``` sudo dnf install -y wget php-fpm php-mysqli php-json php php-devel   ```
