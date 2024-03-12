@@ -159,4 +159,55 @@ Find the line that defines DB_PASSWORD and change password_here to the strong pa
 define('DB_NAME', 'wordpress-db');
 define('DB_USER', 'wordpress-asma');
 define('DB_PASSWORD', 'your_strong_password');
+```
+
+To install your WordPress files under the Apache document root
+
+Now that you've unzipped the installation folder, created a MySQL database and user, and customized the WordPress configuration file, you are ready to copy your installation files to your web server document root so you can run the installation script that completes your installation. The location of these files depends on whether you want your WordPress blog to be available at the actual root of your web server (for example, my.public.dns.amazonaws.com) or in a subdirectory or folder under the root (for example, my.public.dns.amazonaws.com/blog).
+
+If you want WordPress to run at your document root, copy the contents of the wordpress installation directory (but not the directory itself) as follows:
+
+```
+sudo cp -r wordpress/* /var/www/html/
+```
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/856d9f72-d8c7-4aae-b2f4-aff6bfbcb267)
+
+
+If you want WordPress to run in an alternative directory under the document root, first create that directory, and then copy the files to it. In this example, WordPress will run from the directory blog:
+
+```
+sudo mkdir /var/www/html/blog
+sudo cp -r wordpress/* /var/www/html/blog/
+
+```
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/44f35fb7-2d1a-47bc-a930-fac503e85f49)
+
+
+To allow WordPress to use permalinks
+WordPress permalinks need to use Apache .htaccess files to work properly, but this is not enabled by default on Amazon Linux. Use this procedure to allow all overrides in the Apache document root.
+
+Open the httpd.conf file with your favorite text editor (such as nano or vim). If you do not have a favorite text editor, nano is suitable for beginners.
+
+
+```
+sudo vim /etc/httpd/conf/httpd.conf
+```
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/abe6f45a-14fa-4efa-8e4b-d7b267de4e8c)
+
+
+Find the section that starts with <Directory "/var/www/html">.
+
+
+Change the AllowOverride None line in the above section to read AllowOverride All.
+
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/950a54f2-ddac-4534-b7a7-1733c1eb7696)
+
+
+
+Save the file and exit your text editor.
+
 
