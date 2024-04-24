@@ -33,7 +33,6 @@ sudo yum update -y
 
 
 4.2 Install Apache server on Ubuntu
-sudo apt install apache2
 
 ``` 
 sudo apt install apache2 -y
@@ -42,6 +41,7 @@ sudo apt install apache2 -y
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/793eb8cb-6567-4145-b224-55b3b80b1e8c)
 
 4.3 Copy the public IP of instance and check if the Apache server is correctly installed or not.
+
 ```
 http://54.227.204.148/
 ```
