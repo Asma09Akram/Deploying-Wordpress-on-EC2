@@ -131,6 +131,7 @@ ls
 Extract: Extract the WordPress files into the webserver’s document root directory (e.g., /var/www/html/).
 
 STEP 8. 
+
 8.1 Unzip and unarchive installation packages to a folder called WordPress and confirm the folder.
 
 ```
@@ -151,26 +152,41 @@ cd /var/www/html
 
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/878de0ff-dc25-4c64-8df5-0cd7a4cac666)
 
-STEP 5: WordPress Installation:
-
-Access Installation Wizard: Open a web browser and navigate to your EC2 instance’s public IP or domain name to access the WordPress installation wizard.
+STEP 9. Now Access Installation Wizard: Open a web browser and navigate to your EC2 instance’s public IP and append wordpress or domain name to access the WordPress installation wizard.
 
 Launch your web browser with your Public IPv4 DNS and put /wordpress as the endpoint.
 
 
 ```
-ec2-3-110-32-180.ap-south-1.compute.amazonaws.com/wordpress/
+http://54.227.204.148/wordpress
 ```
 
-
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/32e97a82-3128-472f-9f08-b83479a5d926)
-
-
-STEP 6: Database Setup: Enter the database details created earlier during the installation wizard.
-STEP 7: Complete Installation: Fill in website information, create an admin account, configure the wp-config.php file with the database details and finalize the installation.
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/33f28705-8bfc-4844-ae5e-91d1d457566e)
 
 
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/200f0b7a-3505-43ad-a5fe-7af97197b3ab)
+
+STEP 10: Click on Lets go and it will take you to next page
+
+Database Setup: Enter the database details created earlier during the installation wizard.
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/8eac16b3-693d-49e2-bcfb-e6a0ea6fc065)
+
+
+STEP 11: Complete Installation: Fill in website information, create an admin account, configure the wp-config.php file with the database details and finalize the installation.
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/841c5c9a-1fb6-4b4e-9292-7d9b85b24c19)
+
+Now copy the code which came on screen and go to the terminal, go to wordpress folder and create a new file called as wp-config.php
+
+```
+cd wordpress
+vim wp-config.php
+```
+
+Copy the code which we have obatained in the error and paste in wp-config.php file and do esc: wq
+
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/f4e2436f-e155-444a-8e55-86950d166898)
 
 
 To create and edit the wp-config.php file
