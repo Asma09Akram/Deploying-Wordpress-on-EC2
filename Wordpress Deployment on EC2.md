@@ -4,7 +4,7 @@
 * Name: WordPressInstance
 * Choose Ubuntu
 * Choose t2.micro
-* Create new key wp_key
+* Create new key wp_key 2024
 * In Network Settings
    * Auto-assign public IP: Enable
    * Create new Security group: Name as MyEC2Server_SG
@@ -12,6 +12,8 @@
    * Add Inbound rule HTTP Source: Custom (Allow specific IP address) or Anywhere (From ALL IP addresses accessible).
    * Add Inbound rule HTTPS Source: Custom (Allow specific IP address) or Anywhere (From ALL IP addresses accessible).
 * Click on Launch Instance
+  ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/7202d9e3-3df9-40be-8373-79311b53fade)
+
 
   ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/5bce7557-f1a1-4e91-8a8e-819ff8386a9f)
 
