@@ -67,9 +67,9 @@ sudo apt install mysql-server -y
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/57933db7-89ac-45c9-956d-51b796040b68)
 
 
-STEP 3: Configuring MySQL
+STEP 5: Configuring MySQL
 
-3.1 Install MySQL and set up a database, user and password for WordPress.
+5.1 Install MySQL and set up a database, user and password for WordPress.
 
 ```
 sudo mysql -u root
@@ -77,7 +77,7 @@ sudo mysql -u root
 
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/c67daf87-7a51-4153-825a-e7f72132d7af)
 
-3.2 Change authentication plugin to mysql_native_password, give a strong password
+5.2 Change authentication plugin to mysql_native_password, give a strong password
 
 ```
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'MyPassword@123';
@@ -85,16 +85,22 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'MyPasswo
 
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/0821f642-320e-419c-88d9-4429849c6b7b)
 
-3.3 Now lets create a new database user for wordpress, give a strong password
+5.3 Now lets create a new database user for wordpress, give a strong password
 ```
 CREATE USER 'wp_user'@localhost IDENTIFIED BY 'Testpassword@123';
 ```
+5.4 We will now create a database for wordpress
 
+```
+CREATE DATABASE wp;
+```
 
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/a4d07292-b8cb-4463-b34f-cee2b4625883)
 
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/3b9a48ef-49be-4a5e-be0b-e363b7d3150a)
+5.5 We will now grant all privilges on the database 'wp' to the newly created user
+GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost;
 
-
+Press cntl+D
 
 STEP 4: Downloading and Configuring WordPress:
 
