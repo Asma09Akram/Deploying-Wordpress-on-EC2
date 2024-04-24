@@ -27,7 +27,7 @@ Task 4:
 4.1 To ensure that all programs are up to date, run below command:
 
 ``` 
-sudo yum update -y
+sudo apt update -y
 ```
 
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/2c8622b7-1671-4b8f-afcd-e6c27afcbe95)
@@ -67,86 +67,28 @@ sudo apt install mysql-server -y
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/57933db7-89ac-45c9-956d-51b796040b68)
 
 
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/18a7e809-e3a1-42fc-85b7-be22f0143d8e)
+STEP 3: Configuring MySQL
 
-
-
-STEP 3: Configuring MySQL/MariaDB
-
-Install MySQL or MariaDB and set up a database, user and password for WordPress. We would be installing MariaDB server.
+3.1 Install MySQL and set up a database, user and password for WordPress.
 
 ```
-sudo dnf install mariadb105-server
-dnf info mariadb105
+sudo mysql -u root
 ```
 
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/df7ef65b-f2bd-440f-a5a6-7fde8348d62c)
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/c67daf87-7a51-4153-825a-e7f72132d7af)
 
-
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/fceccdac-5185-402b-81b0-009cf94a713d)
-
-```dnf info mariadb105```
-
-
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/91784474-c25f-4aae-ac60-cbe7973ad9be)
-
+3.2 Change authentication plugin to mysql_native_password, give a strong password
 
 ```
-sudo systemctl start mariadb
-sudo systemctl enable mariadb
-sudo systemctl status mariadb
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'MyPassword@123';
 ```
 
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/0821f642-320e-419c-88d9-4429849c6b7b)
 
-
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/aaaafd93-76e8-45f9-9888-a80cf433cd82)
-
-LOG ON AND CREATE A NEW PASSWORD FOR MYSQL
-
-Secure the MySQL installation
-
+3.3 Now lets create a new database user for wordpress, give a strong password
 ```
-sudo mysql_secure_installation
-
+CREATE USER 'wp_user'@localhost IDENTIFIED BY 'Testpassword@123';
 ```
-
-
-Ensure to change the password to your preferred password.
-Type Y to remove the anonymous user accounts.
-Type Y to disable the remote root login.
-Type Y to remove the test database.
-Type Y to reload the privilege tables and save your changes.
-
-
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/72267164-723d-4cd8-ab9b-5c2cec6943fd)
-
-Login with your new password to access the database
-
-```
-sudo mysql -u root -p
-```
-
-Create a new database and a dedicated user for WordPress and grant appropriate privileges to the user on the WordPress database.
-
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/aa008147-f4a4-4097-a82f-01365a8fd08c)
-
-
-Create a new database and a dedicated user for WordPress and grant appropriate privileges to the user on the WordPress database.
-
-
-```
-CREATE USER 'wordpress-asma'@'localhost' IDENTIFIED BY 'your_strong_password';
-
-CREATE DATABASE `wordpress-db`;
-
-CREATE DATABASE `wordpress-db`;
-
-FLUSH PRIVILEGES;
-
-exit
-
-```
-
 
 
 
