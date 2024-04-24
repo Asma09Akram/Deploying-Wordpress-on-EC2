@@ -188,21 +188,22 @@ Copy the code which we have obatained in the error and paste in wp-config.php fi
 
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/f4e2436f-e155-444a-8e55-86950d166898)
 
+After you’ve done that, click “Run the installation”.
 
-To create and edit the wp-config.php file
-The WordPress installation folder contains a sample configuration file called wp-config-sample.php. In this procedure, you copy this file and edit it to fit your specific configuration.
-
-
-Copy the wp-config-sample.php file to a file called wp-config.php. This creates a new configuration file and keeps the original sample file intact as a backup.
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/396cde37-cd66-49e7-9ec5-cc1f73798247)
 
 
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/522cccb1-2179-4e88-870d-167499515f93)
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/27a90e6b-808e-4008-8fe5-7b8daa37c21f)
+
+Fill in all the details and Click on Submit
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/00f19590-10f9-4cf2-8839-b860dee1caea)
 
 
+Click on Login, enter the Username and Password and enter and then you will be redirected to the page you have created on Wordpress.
 
 
-
-
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/6fc7a344-010f-4dbf-92ad-6d75393000bd)
 
 
 
