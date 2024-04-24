@@ -1,4 +1,4 @@
-### Task 1. Sign into AWS Management COnsole
+### Task 1. Sign into AWS Management Console
 
 ### Task 2. Launch an EC2 Instance
 2.1 Click on the Services menu in the top, then click on EC2 in the Compute section, click on Launch Instance
