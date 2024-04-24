@@ -10,7 +10,10 @@ In this tutorial we will install, configure, and secure a WordPress blog on your
 
 Here in this tutorial we will do the following steps to achieve the Deploying WordPress website on EC2 Instance
 1. Launch an EC2 Instance
-2. Install MariaDB
-3. Install ApacheServer
-4. Install PHP
-5. Install WordPress Website
+2. Install Apache Server
+3. Install PHP , MySQL
+4. Configure MySQL
+5. Install WordPress Website on EC2
+
+
+
