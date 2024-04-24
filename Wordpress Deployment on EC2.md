@@ -98,40 +98,58 @@ CREATE DATABASE wp;
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/a4d07292-b8cb-4463-b34f-cee2b4625883)
 
 5.5 We will now grant all privilges on the database 'wp' to the newly created user
+
+```
 GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost;
+```
 
-Press cntl+D
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/aabde510-fce5-401f-a24c-d89233591d1e)
 
-STEP 4: Downloading and Configuring WordPress:
 
-Navigate to the /tmp directory and fetch the latest WordPress package from the official WordPress website.
+Now Press cntl+D to come out of SQL.
+
+
+STEP 6: Now go to wordpress.org and click on Blue button Get wordpress, and you will get the new page, click on Installation Guide
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/f4bc12fa-cf87-4d5f-96ca-a0f4829e0277)
+
+```
+https://developer.wordpress.org/advanced-administration/before-install/howto-install/
+```
+
+
+STEP 7. Download Wordpress now , go to cd /tmp folder
 
 ```
 cd /tmp
 wget https://wordpress.org/latest.tar.gz
+ls
 ```
-
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/8e25fc11-a5dd-47f9-855d-e03cb6c4a32d)
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/513aedf7-2f50-487f-ac0f-787259b38be1)
 
 
 Extract: Extract the WordPress files into the webserver’s document root directory (e.g., /var/www/html/).
 
-Unzip and unarchive installation packages to a folder called WordPress and confirm the folder.
+STEP 8. 
+8.1 Unzip and unarchive installation packages to a folder called WordPress and confirm the folder.
 
 ```
 tar -xzf latest.tar.gz
+ls
 ```
 
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/1bf582b8-ad19-4ca2-bf82-4f0fa9dcaf08)
 
 
-Move file into the html document route directory
+8.2 Move file into the html document route directory
 
 ```
 sudo mv wordpress/ /var/www/html/
+ls
+cd /var/www/html
 ```
 
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/c61f8723-4df6-45c3-a0fa-17499381fe54)
-
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/878de0ff-dc25-4c64-8df5-0cd7a4cac666)
 
 STEP 5: WordPress Installation:
 
