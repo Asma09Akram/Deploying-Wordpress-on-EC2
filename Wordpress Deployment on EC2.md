@@ -1,4 +1,4 @@
-### Task 1. Sign into AWS Management COnsole
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/3d45ea81-429f-4faf-a1dd-eb12eac73a7b)### Task 1. Sign into AWS Management COnsole
 ### Task 2. Launch an EC2 Instance
 2.1 Click on the Services menu in the top, then click on EC2 in the Compute section, click on Launch Instance
 * Name: WordPressInstance
@@ -19,9 +19,8 @@
 
 
 Task 3: SSH into the EC2 Instance
-I have used Putty to SSH into newly created EC2 Instance
 
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/04aa05c8-9456-40c9-821e-fff1339b679d)
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/caf88d03-5d67-4916-bf3f-cede29c818a6)
 
 Task 4: 
 4.1 To ensure that all programs are up to date, run below command:
@@ -30,22 +29,31 @@ Task 4:
 sudo yum update -y
 ```
 
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/2c8622b7-1671-4b8f-afcd-e6c27afcbe95)
 
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/e80ddd27-6d17-4fab-8042-fe451e2df676)
 
-4.2  Install Apache: Use ‘dnf’ package managers to install Apache webserver because the latest one in 2023) can only be installed by ‘dnf’ 
+4.2 Install Apache server on Ubuntu
+sudo apt install apache2
 
 ``` 
-sudo dnf install php -y
+sudo apt install apache2 -y
 ```
 
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/fc50e665-bae9-4c28-805f-0e53dce86c67)
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/793eb8cb-6567-4145-b224-55b3b80b1e8c)
+
+4.3 Copy the public IP of instance and check if the Apache server is correctly installed or not.
+```
+http://54.227.204.148/
+```
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/2a047d97-2da8-47dd-b6a0-e13ed699a4cf)
 
 
-4.3  Install MySQL or MariaDB and set up a database, user and password for WordPress.
+4.4  Now lets install Install php runtime and php mysql connector
 ``` 
-sudo yum install httpd
+sudo apt install php libapache2-mod-php php-mysql -y
 ```
+
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/9e424c7a-db61-4c0b-bb7e-496fbcbd5c52)
 
 
 4.4 Install PHP and necessary PHP modules required by WordPress.
