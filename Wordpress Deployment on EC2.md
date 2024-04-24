@@ -49,7 +49,7 @@ http://54.227.204.148/
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/2a047d97-2da8-47dd-b6a0-e13ed699a4cf)
 
 
-4.4  Now lets install Install php runtime and php mysql connector
+4.4  Now lets install php runtime and php mysql connector
 ``` 
 sudo apt install php libapache2-mod-php php-mysql -y
 ```
@@ -57,15 +57,14 @@ sudo apt install php libapache2-mod-php php-mysql -y
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/9e424c7a-db61-4c0b-bb7e-496fbcbd5c52)
 
 
-4.4 Install PHP and necessary PHP modules required by WordPress.
+4.4 Now we will install MySQL server for database
+
 
 ``` 
-sudo dnf install -y wget php-fpm php-mysqli php-json php php-devel
+sudo apt install mysql-server -y
 ```
 
-
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/682e9d85-becc-4397-8132-788b56627866)
-
+![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/57933db7-89ac-45c9-956d-51b796040b68)
 
 
 ![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/18a7e809-e3a1-42fc-85b7-be22f0143d8e)
