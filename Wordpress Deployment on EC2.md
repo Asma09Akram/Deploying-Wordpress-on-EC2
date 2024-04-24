@@ -2,7 +2,7 @@
 ### Task 2. Launch an EC2 Instance
 2.1 Click on the Services menu in the top, then click on EC2 in the Compute section, click on Launch Instance
 * Name: WordPressInstance
-* Choose Amazon Linux 2023 AMI
+* Choose Ubuntu
 * Choose t2.micro
 * Create new key wp_key
 * In Network Settings
