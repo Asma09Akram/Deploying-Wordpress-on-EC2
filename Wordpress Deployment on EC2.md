@@ -1,4 +1,5 @@
-![image](https://github.com/Asma09Akram/Deploying-Wordpress-on-EC2/assets/124654068/3d45ea81-429f-4faf-a1dd-eb12eac73a7b)### Task 1. Sign into AWS Management COnsole
+### Task 1. Sign into AWS Management COnsole
+
 ### Task 2. Launch an EC2 Instance
 2.1 Click on the Services menu in the top, then click on EC2 in the Compute section, click on Launch Instance
 * Name: WordPressInstance
